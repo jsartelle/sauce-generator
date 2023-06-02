@@ -121,6 +121,6 @@ const keywords: KeywordMap = {
 			{ name: 'de leche', color: '#8c4819' },
 		],
 	},
-}
+} as const
 
 export default keywords
