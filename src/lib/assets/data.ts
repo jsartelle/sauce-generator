@@ -13,22 +13,39 @@ interface KeywordMap {
 	suffixes: KeywordType
 }
 
+const prefixBase = [
+	{ name: 'buffa', color: '#dfc864' },
+	{ name: 'honey', color: '#feb006' },
+	{ name: 'kra', color: '#c60321' },
+	{ name: 'mayo', color: '#fc5779' },
+	{ name: 'mayo', color: '#fcc803' },
+	{ name: 'mayo', color: '#fb8b39' },
+	{ name: 'ket', color: '#d00928' },
+	{ name: 'h', color: '#d9e0ec' },
+	{ name: 'wasab', color: '#d3efc8' },
+	{ name: 'tar', color: '#dcc5cc' },
+	{ name: 'may', color: '#838381' },
+]
+
+const suffixBase = [
+	{ name: 'ranch', color: '#69b9ec' },
+	{ name: 'racha', color: '#e63300' },
+	{ name: 'nch', color: '#62b3e8' },
+	{ name: 'chup', color: '#c6010b' },
+	{ name: 'must', color: '#f2ad08' },
+	{ name: 'chili', color: '#f37d25' },
+	{ name: 'cue', color: '#7c2e26' },
+	{ name: 'anch', color: '#dfc864' },
+	{ name: 'ioli', color: '#dfc864' },
+	{ name: 'chup', color: '#dfc864' },
+	{ name: 'oreo', color: '#010101' },
+]
+
 const keywords: KeywordMap = {
 	prefixes: {
-		base: [
-			{ name: 'buffa', color: '#dfc864' },
-			{ name: 'honey', color: '#feb006' },
-			{ name: 'kra', color: '#c60321' },
-			{ name: 'mayo', color: '#fc5779' },
-			{ name: 'mayo', color: '#fcc803' },
-			{ name: 'mayo', color: '#fb8b39' },
-			{ name: 'ket', color: '#d00928' },
-			{ name: 'h', color: '#d9e0ec' },
-			{ name: 'wasab', color: '#d3efc8' },
-			{ name: 'tar', color: '#dcc5cc' },
-			{ name: 'may', color: '#838381' },
-		],
+		base: prefixBase,
 		extended: [
+			...prefixBase,
 			{ name: 'verde', color: '#4ba52f' },
 			{ name: 'mild', color: '#eeb646' },
 			{ name: 'hot', color: '#ef8a35' },
@@ -77,20 +94,9 @@ const keywords: KeywordMap = {
 		],
 	},
 	suffixes: {
-		base: [
-			{ name: 'ranch', color: '#69b9ec' },
-			{ name: 'racha', color: '#e63300' },
-			{ name: 'nch', color: '#62b3e8' },
-			{ name: 'chup', color: '#c6010b' },
-			{ name: 'must', color: '#f2ad08' },
-			{ name: 'chili', color: '#f37d25' },
-			{ name: 'cue', color: '#7c2e26' },
-			{ name: 'anch', color: '#dfc864' },
-			{ name: 'ioli', color: '#dfc864' },
-			{ name: 'chup', color: '#dfc864' },
-			{ name: 'oreo', color: '#010101' },
-		],
+		base: suffixBase,
 		extended: [
+			...suffixBase,
 			{ name: 'BBQ', color: '#983a23' },
 			{ name: 'garlic', color: '#f0ebdc' },
 			{ name: 'alo', color: '#dfc864' },
