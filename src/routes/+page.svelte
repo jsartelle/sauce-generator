@@ -44,7 +44,6 @@
 		font-weight: bold;
 		white-space: nowrap;
 		text-transform: uppercase;
-		/* TODO fix weird text stroke artifacts */
-		-webkit-text-stroke: 2px black;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 </style>
