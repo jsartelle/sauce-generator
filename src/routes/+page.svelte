@@ -3,18 +3,14 @@
 
 	export let data
 
-	type Keyword = (typeof data.prefixes.extended)[0]
+	type Keyword = (typeof data.prefixes)[0]
 	let prefix: Keyword, suffix: Keyword
 
-	let extendedMode = true
 	let toddMode = false
 
-	let type: keyof typeof data.prefixes = 'extended'
-	$: type = extendedMode ? 'extended' : 'base'
-
 	function generate() {
-		prefix = randomItem(data.prefixes[type])
-		suffix = randomItem(data.suffixes[type])
+		prefix = randomItem(data.prefixes)
+		suffix = randomItem(data.suffixes)
 	}
 	generate()
 </script>
@@ -28,10 +24,6 @@
 
 	<button on:click={generate}>CLICK FOR SAUCE</button>
 
-	<label>
-		<input type="checkbox" role="switch" bind:checked={extendedMode} />
-		<span>Extended Mode</span>
-	</label>
 	<label>
 		<input type="checkbox" role="switch" bind:checked={toddMode} />
 		<span>Todd Mode</span>
