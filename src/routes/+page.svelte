@@ -56,8 +56,7 @@
 
 	.sauce {
 		font-family: 'Geologica', sans-serif;
-		/* TODO auto size text */
-		font-size: 100px;
+		font-size: calc(var(--font-size) * 4);
 		font-weight: bold;
 		white-space: nowrap;
 		text-transform: uppercase;
