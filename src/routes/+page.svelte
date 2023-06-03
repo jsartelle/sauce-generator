@@ -7,8 +7,6 @@
 	type Keyword = (typeof data.prefix)[0]
 	let prefix: Keyword, suffix: Keyword
 
-	let toddMode = false
-
 	function generate() {
 		prefix = randomItem(data.prefix)
 		suffix = randomItem(data.suffix)
@@ -27,9 +25,14 @@
 			}
 		}
 	}
+
+	let toddMode = false
+	const minAngle = -5,
+		maxAngle = 5
+	$: angle = toddMode ? Math.random() * (maxAngle - minAngle) + minAngle : 0
 </script>
 
-<main class="container" class:toddMode>
+<main class="container" style:--angle={angle + 'deg'}>
 	<div class="sauce">
 		<span style:color={prefix.color}>{prefix.name}</span><span style:color={suffix.color}
 			>{suffix.name}</span
@@ -47,8 +50,8 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@700&display=swap');
 
-	.toddMode {
-		transform: rotateZ(2deg);
+	.container {
+		transform: rotateZ(var(--angle));
 	}
 
 	.sauce {
