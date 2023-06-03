@@ -1,5 +1,5 @@
 {
-	"prefixes": [
+	"prefix": [
 		{ "name": "buffa", "color": "#dfc864" },
 		{ "name": "honey", "color": "#feb006" },
 		{ "name": "kra", "color": "#c60321" },
@@ -57,7 +57,7 @@
 		{ "name": "thai", "color": "#e36c2e" },
 		{ "name": "dulce", "color": "#d1994c" }
 	],
-	"suffixes": [
+	"suffix": [
 		{ "name": "ranch", "color": "#69b9ec" },
 		{ "name": "racha", "color": "#e63300" },
 		{ "name": "nch", "color": "#62b3e8" },

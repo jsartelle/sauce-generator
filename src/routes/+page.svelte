@@ -3,14 +3,14 @@
 
 	export let data
 
-	type Keyword = (typeof data.prefixes)[0]
+	type Keyword = (typeof data.prefix)[0]
 	let prefix: Keyword, suffix: Keyword
 
 	let toddMode = false
 
 	function generate() {
-		prefix = randomItem(data.prefixes)
-		suffix = randomItem(data.suffixes)
+		prefix = randomItem(data.prefix)
+		suffix = randomItem(data.suffix)
 	}
 	generate()
 </script>

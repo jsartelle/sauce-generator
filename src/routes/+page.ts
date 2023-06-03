@@ -2,9 +2,8 @@ import data from '$lib/assets/data.json'
 
 export const ssr = false
 
+const { prefix, suffix } = data
+
 export function load() {
-	return {
-		prefixes: data.prefixes,
-		suffixes: data.suffixes,
-	}
+	return { prefix, suffix }
 }
