@@ -1,4 +1,4 @@
-import data from '$lib/assets/data.js'
+import data from '$lib/assets/data.json'
 
 export const ssr = false
 
