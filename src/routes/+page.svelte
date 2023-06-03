@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores'
 	import randomItem from 'random-item'
 
 	export let data
@@ -13,6 +14,19 @@
 		suffix = randomItem(data.suffix)
 	}
 	generate()
+
+	for (const type of ['prefix', 'suffix'] as const) {
+		const override = $page.url.searchParams.get(type)
+		if (override) {
+			const value = data[type].find((keyword) =>
+				keyword.name.toLowerCase().startsWith(override.toLowerCase()),
+			)
+			if (value) {
+				if (type === 'prefix') prefix = value
+				else suffix = value
+			}
+		}
+	}
 </script>
 
 <main class="container" class:toddMode>
@@ -44,6 +58,7 @@
 		font-weight: bold;
 		white-space: nowrap;
 		text-transform: uppercase;
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		text-shadow: -1px -1px 0 var(--color), 1px -1px 0 var(--color), -1px 1px 0 var(--color),
+			1px 1px 0 var(--color);
 	}
 </style>
