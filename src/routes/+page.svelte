@@ -27,9 +27,12 @@
 	}
 
 	let toddMode = false
-	const minAngle = -5,
-		maxAngle = 5
-	$: angle = toddMode ? Math.random() * (maxAngle - minAngle) + minAngle : 0
+	let angle = 0
+	const angleMin = 2, angleMax = 5
+	$: {
+		const value = toddMode ? Math.random() * (angleMax - angleMin) + angleMin : 0
+		angle = Math.random() < 0.5 ? -value : value
+	}
 </script>
 
 <main class="container" style:--angle={angle + 'deg'}>
