@@ -55,7 +55,8 @@
 		{ "name": "caribbean", "color": "#e6a14c" },
 		{ "name": "hab", "color": "#76852b" },
 		{ "name": "thai", "color": "#e36c2e" },
-		{ "name": "dulce", "color": "#d1994c" }
+		{ "name": "dulce", "color": "#d1994c" },
+		{ "name": "cola", "color": "#2483d1" }
 	],
 	"suffix": [
 		{ "name": "ranch", "color": "#69b9ec" },
