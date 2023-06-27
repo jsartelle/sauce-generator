@@ -16,9 +16,14 @@
 	for (const type of ['prefix', 'suffix'] as const) {
 		const override = $page.url.searchParams.get(type)
 		if (override) {
-			const value = data[type].find((keyword) =>
-				keyword.name.toLowerCase().startsWith(override.toLowerCase()),
+			let value = data[type].find(
+				(keyword) => keyword.name.toLowerCase() === override.toLowerCase(),
 			)
+			if (!value) {
+				value = data[type].find((keyword) =>
+					keyword.name.toLowerCase().startsWith(override.toLowerCase()),
+				)
+			}
 			if (value) {
 				if (type === 'prefix') prefix = value
 				else suffix = value
@@ -28,7 +33,8 @@
 
 	let toddMode = false
 	let angle = 0
-	const angleMin = 2, angleMax = 5
+	const angleMin = 2,
+		angleMax = 5
 	$: {
 		const value = toddMode ? Math.random() * (angleMax - angleMin) + angleMin : 0
 		angle = Math.random() < 0.5 ? -value : value
