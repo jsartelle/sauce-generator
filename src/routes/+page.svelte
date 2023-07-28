@@ -54,6 +54,8 @@
 		<input type="checkbox" role="switch" bind:checked={toddMode} />
 		<span>Todd Mode</span>
 	</label>
+
+	<a href="https://cwa-union.org/join-union/how-organize" target="_blank">NSFW DO NOT CLICK AT WORK</a>
 </main>
 
 <style>
