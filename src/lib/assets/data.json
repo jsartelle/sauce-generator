@@ -56,7 +56,9 @@
 		{ "name": "hab", "color": "#76852b" },
 		{ "name": "thai", "color": "#e36c2e" },
 		{ "name": "dulce", "color": "#d1994c" },
-		{ "name": "cola", "color": "#2483d1" }
+		{ "name": "cola", "color": "#2483d1" },
+		{ "name": "tartar", "color": "#55bacc" },
+		{ "name": "cho", "color": "#f2c347" }
 	],
 	"suffix": [
 		{ "name": "ranch", "color": "#69b9ec" },
@@ -91,6 +93,8 @@
 		{ "name": "jerk", "color": "#76351c" },
 		{ "name": "añero", "color": "#e2792e" },
 		{ "name": "curry", "color": "#87533a" },
-		{ "name": "de leche", "color": "#8c4819" }
+		{ "name": "de leche", "color": "#8c4819" },
+		{ "name": "sauce", "color": "#e6ce59" },
+		{ "name": "lula", "color": "#d83645" }
 	]
 }
